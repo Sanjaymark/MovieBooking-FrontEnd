@@ -63,42 +63,40 @@ export const Signup = () =>{
 function SignupForm({name,SetName,email, SetEmail,contact, SetContact,password, SetPassword, handleSubmit})
 {
     return(
-        <div>
-        <div className="flex justify-center items-center h-screen m-1 bg-neutral">
-    <form className="forms" onSubmit={handleSubmit}>
-        <input
-            type="text"
-            placeholder="Name"
-            className="input input-bordered input-success w-full"
-            value={name}
-            onChange={(e) => SetName(e.target.value)}
-        />
-        <input
-            type="text"
-            placeholder="Email"
-            className="input input-bordered input-success w-full"
-            value={email}
-            onChange={(e) => SetEmail(e.target.value)}
-        />
-        <input
-            type="number"
-            placeholder="Contact"
-            className="input input-bordered input-success w-full"
-            value={contact}
-            onChange={(e) => SetContact(e.target.value)}
-        />
-        <input
-            type="password"
-            placeholder="Password"
-            className="input input-bordered input-success w-full"
-            value={password}
-            onChange={(e) => SetPassword(e.target.value)}
-        />
-        <button className="btn btn-success w-full" type="submit">
-            Signup
-        </button>
-    </form>
-</div>
-</div>
+            <div className="flex justify-center items-center h-screen m-1 bg-neutral">
+                <div className="w-full max-w-md">
+                <form className="forms" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        className="input input-bordered input-success w-full"
+                        value={name}
+                        onChange={(e) => SetName(e.target.value)}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Email"
+                        className="input input-bordered input-success w-full"
+                        value={email}
+                        onChange={(e) => SetEmail(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Contact"
+                        className="input input-bordered input-success w-full"
+                        value={contact}
+                        onChange={(e) => SetContact(e.target.value)}
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        className="input input-bordered input-success w-full"
+                        value={password}
+                        onChange={(e) => SetPassword(e.target.value)}
+                    />
+                    <button className="btn btn-success w-full" type="submit">Signup</button>
+                </form>
+                </div>
+            </div>
     )
 }

@@ -57,7 +57,7 @@ export const Login = () => {
 function LoginForm({ name, SetName, email, SetEmail, password, SetPassword, handleSubmit }) {
     return (
         <div className="flex justify-center items-center h-screen bg-neutral m-1">
-    <div className="w-full max-w-md">
+        <div className="w-full max-w-md">
         <form className="forms" onSubmit={handleSubmit}>
             <input
                 type="text"

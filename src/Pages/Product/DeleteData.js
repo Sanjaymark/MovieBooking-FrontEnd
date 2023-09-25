@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { deleteProduct } from "../../Services/product"; 
+import { deleteData } from "../../Services/form"; 
 import { useNavigate, useParams } from "react-router-dom";
 
-export const DeleteProduct = () => {
+export const DeleteData = () => {
     const { id } = useParams();
     const [successMessage, setSuccessMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const Navigate = useNavigate();
 
-    const handleDeleteProduct = async () => {
-        const response = await deleteProduct(id);
+    const handleDeleteData = async () => {
+        const response = await deleteData(id);
 
         if (response.success) {
             setSuccessMessage(response.message);
@@ -25,7 +25,7 @@ export const DeleteProduct = () => {
 
     return (
         <div>
-            <button onClick={handleDeleteProduct}>Delete Product</button>
+            <button onClick={handleDeleteData}>Delete Data</button>
             {successMessage && <p>{successMessage}</p>}
             {errorMessage && <p>{errorMessage}</p>}
         </div>

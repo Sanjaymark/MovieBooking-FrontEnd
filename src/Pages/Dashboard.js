@@ -1,11 +1,11 @@
 import React from "react";
 import { Navigationbar } from "../Components/Navbar";
-import { ProductsList } from "./Product/GetAllProducts";
+import { DataList } from "./Product/GetAllData";
 
 
 export const Dashboard = () =>{
     return <div>
         <Navigationbar/>
-        <ProductsList/>
+        <DataList/>
     </div>
 };

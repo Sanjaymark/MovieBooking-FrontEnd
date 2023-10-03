@@ -94,7 +94,7 @@ function SignupForm({name,SetName,email, SetEmail,contact, SetContact,password, 
                         value={password}
                         onChange={(e) => SetPassword(e.target.value)}
                     />
-                    <button className="btn btn-success w-full" type="submit">Signup</button>
+                    <button className="btn btn-info btn-outline w-full" type="submit">Signup</button>
                 </form>
                 </div>
             </div>

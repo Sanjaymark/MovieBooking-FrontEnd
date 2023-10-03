@@ -80,7 +80,7 @@ function LoginForm({ name, SetName, email, SetEmail, password, SetPassword, hand
                 value={password}
                 onChange={(e) => SetPassword(e.target.value)}
             />
-            <button className="btn btn-success w-full" type="submit">
+            <button className="btn btn-info btn-outline w-full" type="submit">
                 Login
             </button>
         </form>

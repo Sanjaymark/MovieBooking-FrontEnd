@@ -3,12 +3,12 @@ import './App.css';
 import { Dashboard } from "./Pages/Dashboard";
 import { Login } from "./Pages/Login";
 import { Signup } from "./Pages/Signup";
-import { AddData } from "./Pages/Product/AddData";
-import { DataList } from "./Pages/Product/GetAllData";
-import { UpdateData } from "./Pages/Product/EditData";
-import { DeleteData } from "./Pages/Product/DeleteData";
-import { DataDetails } from "./Pages/Product/IndividualData";
-import { HomePage } from "./Pages/HomePage";
+import {  MovieDetails } from "./Pages/Movies/GetMovieByID";
+import { AllMovies } from "./Pages/Movies/GetAllMovies";
+import ShowtimesOfAMovie from "./Pages/Showtime/GetAllShowtimeofMovie";
+import { AddBooking } from "./Pages/Booking/AddBooking";
+import { UserBookings } from "./Pages/Booking/BookingsOfAUser";
+
 
 
 
@@ -21,15 +21,14 @@ function App()
         
       <div className="App">
         <Routes>
-          <Route exact path="/" element={<HomePage/>} />
+          <Route exact path="/" element={<Dashboard/>} />
           <Route exact path="/user/login" element={<Login/>} />
           <Route exact path="/user/signup" element={<Signup/>} />
-          <Route exact path="/form/add" element={<AddData/>} />
-          <Route exact path="/form/all" element={<Dashboard/>} />
-          <Route exact path="/form/:id" element={<DataDetails/>} />
-          <Route exact path="/form/edit/:id" element={<UpdateData/>} />
-          <Route exact path="/form/delete/:id" element={<DeleteData/>} />
-          
+          <Route exact path="/movie/all" element={<AllMovies/>} />
+          <Route exact path="/movie/:id" element={<MovieDetails/>} />
+          <Route exact path="/showtime/all/:movieId" element={<ShowtimesOfAMovie/>}/>
+          <Route exact path="/booking/add/:showtimeId" element={<AddBooking/>}/>
+          <Route exact path="/booking/user/:userId" element={UserBookings}/>
         </Routes>
       </div>
   ); 

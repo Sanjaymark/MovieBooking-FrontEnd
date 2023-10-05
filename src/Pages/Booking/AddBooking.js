@@ -4,7 +4,7 @@ import { addBooking } from "../../Services/booking";
 import { Navigationbar } from "../../Components/Navbar";
 
 export const AddBooking = () => {
-  const [number_of_seats, setNumber_of_seats] = useState({ seats: 1 });
+  const [number_of_seats, setNumber_of_seats] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const { showtimeId } = useParams();
@@ -13,14 +13,13 @@ export const AddBooking = () => {
     const handleAddBooking = async () => {
         const newData = { number_of_seats };
         const response = await addBooking(newData, showtimeId);
-
-        console.log(response)
         
 
         if (response.success) {
             setSuccessMessage(response.message);
             setErrorMessage("");
             setNumber_of_seats("");
+            Navigate("/")
            
         } else {
             setSuccessMessage("");

@@ -22,6 +22,7 @@ export const Login = () => {
                 SetError(""); // Clear error message
                 setSuccessMsg(data.message);
                 localStorage.setItem("token", data.token);
+                localStorage.setItem("userId", data.id);
                 
                 setTimeout(() => 
                 {

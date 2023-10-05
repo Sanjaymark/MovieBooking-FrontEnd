@@ -12,6 +12,9 @@ export async function handleSignup(payload)
     });
 
     const data = await response.json();
+
+    console.log(data);
+
     return data;
 }
 
@@ -28,6 +31,9 @@ export async function handleLogin(payload)
     });
 
     const data = await response.json();
+
+    
+
     return data;
 }
 

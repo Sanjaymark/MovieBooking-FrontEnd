@@ -19,11 +19,11 @@ export const addBooking = async (bookingData, showtimeId) => {
   
       const data = await response.json();
 
-      console.log(data)
+      console.log(localStorage.getItem("userId"))
 
-      return { success: true, message: data.message, data : data };
+      return { success: true, message: data.message};
     } catch (error) {
-      console.error("An error occurred while adding the booking", error);
+      console.error("An error occurred while adding booking", error);
       return { success: false, message: "An error occurred while adding the booking" };
     }
   };
@@ -35,7 +35,7 @@ export const addBooking = async (bookingData, showtimeId) => {
 export async function getAllBookingsofUser(userId) {
     try {
         console.log(userId);
-        const response = await fetch(`${API}/booking/user/${userId}`,
+        const response = await fetch(`${API}/booking/user/bookings/${userId}`,
         {
             method: "GET",
             headers: {
@@ -67,6 +67,39 @@ export async function getAllBookingsofUser(userId) {
 
 
 
+
+
+
+//Get Booking by Id
+export async function getBookingById(bookingId) {
+    try {
+        const response = await fetch(`${API}/booking/${bookingId}`,
+        {
+            method: "GET",
+            headers: {
+                "x-auth-token" : localStorage.getItem("token"),
+            }
+        });
+        const data = await response.json();
+
+        if (response.ok) {
+            return {
+                success: true,
+                data: data,
+            };
+        } else {
+            return {
+                success: false,
+                message: data.error || "Failed to fetch data",
+            };
+        }
+    } catch (error) {
+        return {
+            success: false,
+            message: "An error occurred while fetching the data",
+        };
+    }
+}
 
 
 

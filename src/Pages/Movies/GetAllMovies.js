@@ -24,7 +24,7 @@ export const AllMovies = () => {
   };
 
   return (
-    <div className=" m-1 h-full border-2 ">
+    <div className=" m-1 h-full border-2 bg-base-300">
       <div className="table-container">
         {data.length > 0 ? (
           <div className="carousel w-full h-100">
@@ -49,11 +49,11 @@ export const AllMovies = () => {
             <img src={movie.posterUrl} alt={movie.title} className="rounded-xl border-2 border-info" />
           </figure>
           <div className="card-body text-center items-center ">
-              <h1 className="card-title text-2xl italic txt-clr">{movie.title}</h1>
+              <h1 className="card-title text-4xl italic txt-clr">{movie.title}</h1>
           </div>
           <div className="card-body items-center text-center">
             <div className="card-actions justify-end">
-              <Link to={`/movie/${movie._id}`} className="btn btn-primary btn-outline bg-neutral btn-info">Watch Movie</Link>
+              <Link to={`/movie/${movie._id}`} className="btn btn-primary btn-outline bg-neutral btn-info">Watch</Link>
               </div>
             </div>
         </div>

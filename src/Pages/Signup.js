@@ -27,6 +27,7 @@ export const Signup = () =>{
                 SetError("")
                 setSuccessMsg(data.message);
                 localStorage.setItem("token", data.token);
+                localStorage.setItem("userId", data.id);
                 
                 setTimeout(() => 
                 {

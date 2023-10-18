@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { addBooking } from "../../Services/booking";
-import { Navigationbar } from "../../Components/Navbar";
+import { Navigationbar2 } from "../../Components/Navbar";
 
 export const AddBooking = () => {
   const [number_of_seats, setNumber_of_seats] = useState("");
@@ -37,7 +37,7 @@ export const AddBooking = () => {
 
     return (
         <div>
-            <Navigationbar/>
+            <Navigationbar2/>
         <div className="bg-neutral m-1 h-screen flex justify-center items-center">
             <div>
                 <span className="text-4xl dark">Select No.of Seats</span>

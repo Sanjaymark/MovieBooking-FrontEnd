@@ -1,12 +1,14 @@
 import React from "react";
-import { Navigationbar } from "../Components/Navbar";
+import { Navigationbar, Navigationbar2 } from "../Components/Navbar";
 import { AllMovies } from "./Movies/GetAllMovies";
 
 
 
 export const Dashboard = () =>{
+    const token = localStorage.getItem("token");
+    
     return <div>
-        <Navigationbar/>
-        <AllMovies/>
-    </div>
+    {token ? <Navigationbar2 /> : <Navigationbar />}
+    <AllMovies />
+  </div>
 };

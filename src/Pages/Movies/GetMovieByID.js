@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { Navigationbar } from "../../Components/Navbar";
+import { Navigationbar2 } from "../../Components/Navbar";
 import { getMovieById } from "../../Services/movie";
 
 export const MovieDetails = () => {
@@ -27,7 +27,7 @@ export const MovieDetails = () => {
 
     return (
         <div>
-            <Navigationbar />
+            <Navigationbar2 />
             <div className="m-1 h-full" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
                 {data ? (
                     <div className="card w-full h-screen bg-neutral shadow-xl dark border-2 border-error">

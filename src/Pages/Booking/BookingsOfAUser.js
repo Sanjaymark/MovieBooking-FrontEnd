@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getAllBookingsofUser } from "../../Services/booking.js";
-import { Navigationbar } from "../../Components/Navbar.js";
+import {  Navigationbar2 } from "../../Components/Navbar.js";
 
 export const UserBookings = () => {
     const [data, setData] = useState([]);
@@ -26,7 +26,7 @@ export const UserBookings = () => {
 
   return (
     <div className="w-full flex flex-wrap">
-  <Navigationbar />
+  <Navigationbar2 />
   <div className="bg-neutral dark m-1 h-screen border-2 txt-clr w-full">
     <h1 className="text-3xl font-bold mb-4">Your Bookings</h1>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

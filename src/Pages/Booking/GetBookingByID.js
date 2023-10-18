@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Navigationbar } from "../../Components/Navbar";
+import { Navigationbar2 } from "../../Components/Navbar";
 import { getBookingById, deleteBooking } from "../../Services/booking";
 
 export const BookingDetails = () => {
@@ -38,7 +38,7 @@ export const BookingDetails = () => {
 
   return (
     <div>
-      <Navigationbar />
+      <Navigationbar2 />
       <div className="bg-neutral border-2" style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100vh" }}>
         <div className="bg-neutral dark m-1 w-96 txt-clr">
           <h1 className="text-3xl font-bold m-4">Booking Details</h1>

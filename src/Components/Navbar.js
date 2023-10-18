@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const Navigationbar = () =>{
 
     const userId= localStorage.getItem("userId");
-    console.log(userId);
+    
     const Navigate = useNavigate();
     return (
       <div className="navbar bg-neutral  text-neutral-content">
@@ -30,7 +30,7 @@ export const Navigationbar = () =>{
 export const Navigationbar2 = () =>{
 
   const userId= localStorage.getItem("userId");
-  console.log(userId);
+  
   const Navigate = useNavigate();
   return (
     <div className="navbar bg-neutral  text-neutral-content">
